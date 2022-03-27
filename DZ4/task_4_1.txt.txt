@@ -1,0 +1,55 @@
+ - Проверить, установлен ли пакет pillow в глобальном окружении. Если да — зафиксировать версию.
+---------------------------------------------------------------------------------------------------
+C:\Users\а\PycharmProjects\pythonProject>pip show pillow
+Name: Pillow
+Version: 8.3.0
+Summary: Python Imaging Library (Fork)
+Home-page: https://python-pillow.org
+Author: Alex Clark (PIL Fork Author)
+Author-email: aclark@python-pillow.org
+License: HPND
+Location: c:\users\а\appdata\roaming\python\python38\site-packages
+Requires:
+Required-by:
+
+
+ - Установить самую свежую версию pillow, если ранее она не была установлена.
+-----------------------------------------------------------------------------------
+C:\Users\а\PycharmProjects\pythonProject>pip install pillow
+Defaulting to user installation because normal site-packages is not writeable
+Collecting pillow
+  Using cached Pillow-9.0.1-cp38-cp38-win_amd64.whl (3.2 MB)
+Installing collected packages: pillow
+Successfully installed pillow-9.0.1
+
+
+- Создать и активировать виртуальное окружение. Убедиться, что в нем нет пакета pillow.
+--------------------------------------------------------------------------------------------
+C:\Users\а\PycharmProjects\v1326\Scripts>activate.bat
+
+(v1326) C:\Users\а\PycharmProjects\v1326\Scripts>pip freeze
+Pillow==8.3.1
+
+(v1326) C:\Users\а\PycharmProjects\v1326\Scripts>pip uninstall pillow
+Found existing installation: Pillow 8.3.1
+Uninstalling Pillow-8.3.1:
+  Would remove:
+    c:\users\а\pycharmprojects\v1326\lib\site-packages\pil\*
+    c:\users\а\pycharmprojects\v1326\lib\site-packages\pillow-8.3.1.dist-info\*
+Proceed (y/n)? y
+  Successfully uninstalled Pillow-8.3.1
+
+-Установить в виртуальное окружение pillow версии 7.1.1 (или другой, отличной от самой свежей).
+----------------------------------------------------------------------------------------------------
+(v1326) C:\Users\а\PycharmProjects\v1326\Scripts>pip install pillow==7.1.1
+Collecting pillow==7.1.1
+  Downloading Pillow-7.1.1-cp38-cp38-win_amd64.whl (2.0 MB)
+     |--------------------------------| 2.0 MB 819 kB/s
+Installing collected packages: pillow
+Successfully installed pillow-7.1.1
+
+-деактивировать виртуальное окружение.
+----------------------------------------------------------------------------------------------------
+(v1326) C:\Users\а\PycharmProjects\v1326\Scripts>deactivate.bat
+C:\Users\а\PycharmProjects\v1326\Scripts>
+
